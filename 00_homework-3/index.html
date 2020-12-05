@@ -17,32 +17,36 @@
 					<h2>Generate a Password</h2>
 				</div>
 				<div class="card-body">
-					<div class="password-options">
-						<p>Using the slider, choose a Password Length between 8 - 128 characters.</p>
-						<p><label for="pwLength">Length</label></p>
-						<input type="range" id="pwLength" name="length" min="8" max="128">
+					<div id="passwordOptions" class="password__options visually-hidden" aria-hidden="false">
+						<div class="password__options-range">
+							<p class="password__options-heading">Choose a Password Length.</p>
+							<p>Use the "up arrow" to increment or type in a number.</p>
+							<p><label for="pwLength">Length must be between 8 - 128 characters</label></p>
+							<input id="pwLength" type="number" name="length" min="8" max="128">
+						</div>
 
-						<p>Choose at least one of the criteria below.</p>
-						<div>
-							<label for="pwLowerCase">Lowercase</label>
-							<input type="checkbox" id="pwLowerCase" name="lower">
-						</div>
-						<div>
-							<label for="pwUpperCase">Uppercase</label>
-							<input type="checkbox" id="pwUpperCase" name="upper">
-						</div>
-						<div>
-							<label for="pwNumeric">Numeric Characters</label>
-							<input type="checkbox" id="pwNumeric" name="numeric">
-						</div>
-						<div>
-							<label for="pwSpecialChar">Special Characters</label>
-							<input type="checkbox" id="pwSpecialChar" name="special">
+						<div class="password__options-checkboxes">
+							<p class="password__options-heading">Choose at least one of the criteria below.</p>
+							<div>
+								<label class="password__options-label" for="pwLowerCase">Lowercase</label>
+								<input id="pwLowerCase" class="password__options-input" type="checkbox" name="lower">
+							</div>
+							<div>
+								<label class="password__options-label" for="pwUpperCase">Uppercase</label>
+								<input id="pwUpperCase" class="password__options-input" type="checkbox" name="upper">
+							</div>
+							<div>
+								<label class="password__options-label" for="pwNumeric">Numeric Characters</label>
+								<input id="pwNumeric" class="password__options-input" type="checkbox" name="numeric">
+							</div>
+							<div>
+								<label class="password__options-label" for="pwSpecialChar">Special Characters</label>
+								<input id="pwSpecialChar" class="password__options-input" type="checkbox" name="special">
+							</div>
 						</div>
 					</div>
-					<textarea
+					<textarea id="password"
 						readonly
-						id="password"
 						placeholder="Your Secure Password"
 						aria-label="Generated Password">
 					</textarea>

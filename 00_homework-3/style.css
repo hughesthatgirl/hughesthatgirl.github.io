@@ -54,6 +54,10 @@ header {
   min-height: 100px;
 }
 
+.card-body > * + * {
+  margin-top: 40px;
+}
+
 .card-footer {
   text-align: center;
 }
@@ -70,6 +74,16 @@ header {
   content: " ";
   display: block;
   clear: both;
+}
+
+.password__options-heading {
+  color: rgb(59, 73, 84);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.password__options > * + * {
+  margin-top: 40px;
 }
 
 .btn {
@@ -110,7 +124,6 @@ button[disabled] {
   padding-bottom: 85px;
   font-size: 1.2rem;
   text-align: center;
-  margin-top: 10px;
   margin-bottom: 10px;
   border: 2px dashed #c0c7cf;
   border-radius: 6px;
