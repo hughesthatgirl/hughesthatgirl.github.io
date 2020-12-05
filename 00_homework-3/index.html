@@ -1,34 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Password Generator</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Password Generator</h1>
-      </header>
-      <div class="card">
-        <div class="card-header">
-          <h2>Generate a Password</h2>
-        </div>
-        <div class="card-body">
-          <textarea
-            readonly
-            id="password"
-            placeholder="Your Secure Password"
-            aria-label="Generated Password"
-          ></textarea>
-        </div>
-        <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
-        </div>
-      </div>
-    </div>
-    <script src="script.js"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Password Generator</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				<h1>Password Generator</h1>
+			</header>
+			<div class="card">
+				<div class="card-header">
+					<h2>Generate a Password</h2>
+				</div>
+				<div class="card-body">
+					<div class="password-options">
+						<p>Using the slider, choose a Password Length between 8 - 128 characters.</p>
+						<p><label for="pwLength">Length</label></p>
+						<input type="range" id="pwLength" name="length" min="8" max="128">
+
+						<p>Choose at least one of the criteria below.</p>
+						<div>
+							<label for="pwLowerCase">Lowercase</label>
+							<input type="checkbox" id="pwLowerCase" name="lower">
+						</div>
+						<div>
+							<label for="pwUpperCase">Uppercase</label>
+							<input type="checkbox" id="pwUpperCase" name="upper">
+						</div>
+						<div>
+							<label for="pwNumeric">Numeric Characters</label>
+							<input type="checkbox" id="pwNumeric" name="numeric">
+						</div>
+						<div>
+							<label for="pwSpecialChar">Special Characters</label>
+							<input type="checkbox" id="pwSpecialChar" name="special">
+						</div>
+					</div>
+					<textarea
+						readonly
+						id="password"
+						placeholder="Your Secure Password"
+						aria-label="Generated Password">
+					</textarea>
+				</div>
+				<div class="card-footer">
+					<button id="generate" class="btn">Generate Password</button>
+				</div>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
 </html>
