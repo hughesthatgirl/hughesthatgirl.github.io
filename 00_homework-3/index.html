@@ -17,22 +17,16 @@
 					<h2>Generate a Password</h2>
 				</div>
 				<div class="card-body">
-					<div id="passwordOptions" class="password__options visually-hidden" aria-hidden="false">
-						<div class="password__options-range">
-							<p class="password__options-heading"><span class="step">Step 1:</span> Choose a Password Length.</p>
-							<p><label for="pwLength">Password length must be between 8 - 128 characters</label></p>
-							<input id="pwLength" type="number" name="length" min="8" max="128">
-							<p class="instructions">Use the "up arrow" to increment or type in a number.</p>
-						</div>
-
+					<div id="passwordOptions" class="password__options">
 						<div class="password__options-checkboxes">
-							<p class="password__options-heading"><span class="step">Step 2:</span> Choose at least one of the criteria below.</p>
+							<p class="password__options-heading"><span class="step">Step 1:</span> Choose at least one of the criteria below.</p>
+							<p class="error" aria-hidden='true'>Please choose at least one criteria</p>
 							<div class="checkbox__wrapper">
-								<label class="password__options-label" for="pwLowerCase">Lowercase</label>
+								<label class="password__options-label" for="pwLowerCase">Lowercase Letters</label>
 								<input id="pwLowerCase" class="password__options-input" type="checkbox" name="lower">
 							</div>
 							<div class="checkbox__wrapper">
-								<label class="password__options-label" for="pwUpperCase">Uppercase</label>
+								<label class="password__options-label" for="pwUpperCase">Uppercase Letters</label>
 								<input id="pwUpperCase" class="password__options-input" type="checkbox" name="upper">
 							</div>
 							<div class="checkbox__wrapper">
@@ -44,6 +38,13 @@
 								<input id="pwSpecialChar" class="password__options-input" type="checkbox" name="special">
 							</div>
 						</div>
+						<div class="password__options-range">
+							<p class="password__options-heading"><span class="step">Step 2:</span> Choose a Password Length.</p>
+							<p class="error" aria-hidden='true'>Please choose a length.</p>
+							<p><label for="pwLength">Password length must be between 8 - 128 characters</label></p>
+							<input id="pwLength" type="number" name="length" min="8" max="128">
+							<p class="instructions">Use the "up arrow" to increment or type in a number.</p>
+						</div>
 					</div>
 					<textarea id="password"
 						readonly
@@ -52,7 +53,7 @@
 					</textarea>
 				</div>
 				<div class="card-footer">
-					<button id="generate" class="btn">Generate Password</button>
+					<button id="generate" class="btn" type="button">Generate Password</button>
 				</div>
 			</div>
 		</div>

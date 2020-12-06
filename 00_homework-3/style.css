@@ -90,6 +90,16 @@ header {
   color: rgb(175, 8, 8);
 }
 
+.error {
+  color: #fff;
+  background-color: rgb(175, 8, 8);
+  padding: 8px;
+}
+
+[aria-hidden='true']{
+  display: none;
+}
+
 .instructions {
   font-size: 14px;
   font-style: italic;
