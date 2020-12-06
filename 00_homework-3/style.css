@@ -86,6 +86,19 @@ header {
   margin-top: 40px;
 }
 
+.step {
+  color: rgb(175, 8, 8);
+}
+
+.instructions {
+  font-size: 14px;
+  font-style: italic;
+}
+
+.checkbox__wrapper {
+  margin-top: 20px;
+}
+
 .btn {
   border: none;
   background-color: hsl(360, 91%, 36%);

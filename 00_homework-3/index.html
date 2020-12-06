@@ -19,27 +19,27 @@
 				<div class="card-body">
 					<div id="passwordOptions" class="password__options visually-hidden" aria-hidden="false">
 						<div class="password__options-range">
-							<p class="password__options-heading">Choose a Password Length.</p>
-							<p>Use the "up arrow" to increment or type in a number.</p>
-							<p><label for="pwLength">Length must be between 8 - 128 characters</label></p>
+							<p class="password__options-heading"><span class="step">Step 1:</span> Choose a Password Length.</p>
+							<p><label for="pwLength">Password length must be between 8 - 128 characters</label></p>
 							<input id="pwLength" type="number" name="length" min="8" max="128">
+							<p class="instructions">Use the "up arrow" to increment or type in a number.</p>
 						</div>
 
 						<div class="password__options-checkboxes">
-							<p class="password__options-heading">Choose at least one of the criteria below.</p>
-							<div>
+							<p class="password__options-heading"><span class="step">Step 2:</span> Choose at least one of the criteria below.</p>
+							<div class="checkbox__wrapper">
 								<label class="password__options-label" for="pwLowerCase">Lowercase</label>
 								<input id="pwLowerCase" class="password__options-input" type="checkbox" name="lower">
 							</div>
-							<div>
+							<div class="checkbox__wrapper">
 								<label class="password__options-label" for="pwUpperCase">Uppercase</label>
 								<input id="pwUpperCase" class="password__options-input" type="checkbox" name="upper">
 							</div>
-							<div>
+							<div class="checkbox__wrapper">
 								<label class="password__options-label" for="pwNumeric">Numeric Characters</label>
 								<input id="pwNumeric" class="password__options-input" type="checkbox" name="numeric">
 							</div>
-							<div>
+							<div class="checkbox__wrapper">
 								<label class="password__options-label" for="pwSpecialChar">Special Characters</label>
 								<input id="pwSpecialChar" class="password__options-input" type="checkbox" name="special">
 							</div>
