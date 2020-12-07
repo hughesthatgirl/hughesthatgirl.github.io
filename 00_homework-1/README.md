@@ -8,4 +8,4 @@ This repo contains all of the code for the Horiseon homepage.
 * Code changes will be reviewed via pull request.
 
 ## Preview of what the homepage should look like
-![Screenshot of the Horiseon homepage](/assets/images/01-html-css-git-homework-demo.png);
+![Screenshot of the Horiseon homepage](./assets/images/01-html-css-git-homework-demo.png);

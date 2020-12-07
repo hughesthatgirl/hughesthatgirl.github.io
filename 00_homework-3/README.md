@@ -21,10 +21,10 @@ Follow this link to [go straight to the portfolio section](https://hughesthatgir
 Click on the link on the portfolio page to go to the password generator site. 
 
 ## Preview of what the password generator should look like
-![Screenshot of the password generator](00_homework-3/images/password_generator_unfilled.png);
+![Screenshot of the password generator](./images/password_generator_unfilled.png);
 
 ## The password generator will display the appropriate error messaging based on missing criteria
-![Screenshot of the password generator with error messaging](00_homework-3/images/password_generator_with_errors.png);
+![Screenshot of the password generator with error messaging](./images/password_generator_with_errors.png);
 
 ## The password generator with password displayed
-![Screenshot of the password generator filled in](00_homework-3/images/password_generator_filled_in.png);
+![Screenshot of the password generator filled in](./images/password_generator_filled_in.png);
