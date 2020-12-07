@@ -19,12 +19,12 @@ var numbers = '0123456789';
 var specialChar = '!#$%&()*+,-./:;<=>?@[\]^_`{|}~';
 var criteria = '';
 
-var hasLowerCase = document.getElementById('pwLowerCase').checked;
-var hasUpperCase = document.getElementById('pwUpperCase').checked;
-var hasNumeric = document.getElementById('pwNumeric').checked;
-var hasSpecialChar = document.getElementById('pwSpecialChar').checked;
+var hasLowerCase = document.getElementById('pwLowerCase');
+var hasUpperCase = document.getElementById('pwUpperCase');
+var hasNumeric = document.getElementById('pwNumeric');
+var hasSpecialChar = document.getElementById('pwSpecialChar');
 
-var pwLength = document.getElementById('pwLength').value;
+var pwLength = document.getElementById('pwLength');
 
 var generateBtn = document.getElementById('generate');
 var passwordContainer = document.getElementById('password');
@@ -32,27 +32,32 @@ var passwordContainer = document.getElementById('password');
 //If criteria checkbox is selected... add the associated character string to the 'criteria' variable
 //Return the final 'criteria' string
 function buildString(){
-    if (!hasLowerCase && !hasUpperCase && !hasNumeric && !hasSpecialChar){
+    if (!hasLowerCase.checked && !hasUpperCase.checked && !hasNumeric.checked && !hasSpecialChar.checked){
         criteria = '';
     }
 
-	if (hasLowerCase){
+	if (hasLowerCase.checked){
     	criteria += lettersLower;
 	} 
 
-	if (hasUpperCase){
+	if (hasUpperCase.checked){
     	criteria += lettersUpper;
 	} 
     
-    if (hasNumeric){
+    if (hasNumeric.checked){
     	criteria += numbers;
 	} 
     
-    if (hasSpecialChar){
+    if (hasSpecialChar.checked){
     	criteria += specialChar;
 	}
     
     return criteria; 
+}
+
+//Use this later to the return the value of #pwLength input
+function getLengthValue(inputEl){
+  return inputEl.value;
 }
 
 //Pass in the length selected by the user (this is being stored in the variable pwLength);
@@ -75,6 +80,6 @@ function buildPassword(length) {
 //Call buildPassword and pass in pwLength
 //Update the innerText of #password with the final password string
 generateBtn.addEventListener('click', function(){
-	var password = buildPassword(pwLength);
+	var password = buildPassword(getLengthValue(pwLength));
 	passwordContainer.innerText = password;
 });
