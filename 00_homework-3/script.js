@@ -1,18 +1,3 @@
-//TODO:
-
-//Create a function to build string based on selected criteria
-//Create function to set the length of the string to the length selected by the user and build the password;
-
-// When generateBtn is clicked...
-// run buildString function
-// run buildPassword function 
-// display final password string inside of #password
-
-//Extra:
-// when generateBtn is clicked...if no criteria and/or no length has been selected - show error messages
-// Add a reset button to clear out the form and generate another password
-// Change opacity of "generate password" button to full opacity if criteria is met
-
 var lettersUpper ='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var lettersLower = 'abcdefghijklmnopqrstuvwxyz';
 var numbers = '0123456789';
@@ -25,6 +10,11 @@ var hasNumeric = document.getElementById('pwNumeric');
 var hasSpecialChar = document.getElementById('pwSpecialChar');
 
 var pwLength = document.getElementById('pwLength');
+
+var criteriaError = document.getElementById('criteriaError');
+var lengthError = document.getElementById('lengthError');
+var critErrorMsg = document.getElementById('critErrorMsg');
+var lengErrorMsg = document.getElementById('lengErrorMsg');
 
 var generateBtn = document.getElementById('generate');
 var passwordContainer = document.getElementById('password');
@@ -81,5 +71,27 @@ function buildPassword(length) {
 //Update the innerText of #password with the final password string
 generateBtn.addEventListener('click', function(){
 	var password = buildPassword(getLengthValue(pwLength));
-	passwordContainer.innerText = password;
+	if(password){
+		passwordContainer.innerText = password;
+		criteriaError.setAttribute('aria-hidden', true);
+		critErrorMsg.setAttribute('aria-hidden', true)
+		lengthError.setAttribute('aria-hidden', true);
+		lengErrorMsg.setAttribute('aria-hidden', true);
+	} 
+	
+	if (!buildString()){
+		criteriaError.setAttribute('aria-hidden', false);
+		critErrorMsg.setAttribute('aria-hidden', false)
+	} else {
+		criteriaError.setAttribute('aria-hidden', true);
+		critErrorMsg.setAttribute('aria-hidden', true)
+	}
+	
+	if (getLengthValue(pwLength) === ""){
+		lengthError.setAttribute('aria-hidden', false);
+		lengErrorMsg.setAttribute('aria-hidden', false);
+	} else {
+		lengthError.setAttribute('aria-hidden', true);
+		lengErrorMsg.setAttribute('aria-hidden', true)
+	}
 });

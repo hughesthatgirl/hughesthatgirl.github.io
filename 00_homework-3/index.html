@@ -20,7 +20,7 @@
 					<div id="passwordOptions" class="password__options">
 						<div class="password__options-checkboxes">
 							<p class="password__options-heading"><span class="step">Step 1:</span> Choose at least one of the criteria below.</p>
-							<p class="error" aria-hidden='true'>Please choose at least one criteria</p>
+							<p id="criteriaError" class="error" aria-hidden='true'>Please choose at least one criteria</p>
 							<div class="checkbox__wrapper">
 								<label class="password__options-label" for="pwLowerCase">Lowercase Letters</label>
 								<input id="pwLowerCase" class="password__options-input" type="checkbox" name="lower">
@@ -40,14 +40,16 @@
 						</div>
 						<div class="password__options-range">
 							<p class="password__options-heading"><span class="step">Step 2:</span> Choose a Password Length.</p>
-							<p class="error" aria-hidden='true'>Please choose a length.</p>
+							<p id="lengthError" class="error" aria-hidden='true'>Please choose a length.</p>
 							<p><label for="pwLength">Password length must be between 8 - 128 characters</label></p>
 							<input id="pwLength" type="number" name="length" min="8" max="128">
 							<p class="instructions">Use the "up arrow" to increment or type in a number.</p>
 						</div>
 					</div>
-					<div class="text-area__wrapper">
+					<div id="textAreaWrapper" class="text-area__wrapper">
 						<p>Your Generated Password</p>
+						<p id="critErrorMsg" class="error-msg" aria-hidden="true">Missing criteria. Please be sure you have selected at least one criteria from above.</p>
+						<p id="lengErrorMsg" class="error-msg" aria-hidden="true">Missing criteria. Please be sure you have set a password length between 8 - 128 characters.</p>
 						<textarea id="password"
 							readonly
 							placeholder=""

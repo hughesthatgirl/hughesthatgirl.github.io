@@ -96,6 +96,11 @@ header {
   padding: 8px;
 }
 
+.error-msg {
+  color: rgb(175, 8, 8);
+  font-family: sans-serif;
+}
+
 [aria-hidden='true']{
   display: none;
 }
