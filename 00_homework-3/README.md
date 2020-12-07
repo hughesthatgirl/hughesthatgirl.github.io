@@ -16,9 +16,8 @@
 1. To generate the password with the desired length and criteria, click the 'Generate Password' button
     1. Note: If the criteria and/or length is not selected by the user, when the generate button is clicked, it will display error messaging depending on what the user has left blank
 
-## Go to the portfolio page
-Follow this link to [go straight to the portfolio section](https://hughesthatgirl.github.io/portfolio.html) of my website.
-Click on the link on the portfolio page to go to the password generator site. 
+## Go to the Password Generator
+Follow this link to [go to the password generator](https://hughesthatgirl.github.io/00_homework-3/index.html). 
 
 ## Preview of what the password generator should look like
 ![Screenshot of the password generator](./images/password_generator_unfilled.png);
