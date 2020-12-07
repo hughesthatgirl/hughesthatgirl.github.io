@@ -134,23 +134,32 @@ button[disabled] {
   float: right;
 }
 
-#password {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: none;
+.text-area__wrapper {
   display: block;
   width: 100%;
   padding-top: 15px;
   padding-left: 15px;
   padding-right: 15px;
   padding-bottom: 85px;
-  font-size: 1.2rem;
-  text-align: center;
   margin-bottom: 10px;
-  border: 2px dashed #c0c7cf;
+  border: 2px dashed rgb(59, 73, 84);
   border-radius: 6px;
+  color: rgb(59, 73, 84);
+  text-align: center;
+}
+
+#password {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  color: rgb(59, 73, 84);
+  display: block;
+  width: 100%;
+  padding: 15px;
+  font-size: 1.2rem;
   resize: none;
+  text-align: center;
   overflow: hidden;
 }
 
