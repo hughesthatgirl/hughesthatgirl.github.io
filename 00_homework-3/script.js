@@ -2,7 +2,6 @@ var lettersUpper ='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var lettersLower = 'abcdefghijklmnopqrstuvwxyz';
 var numbers = '0123456789';
 var specialChar = '!#$%&()*+,-./:;<=>?@[\]^_`{|}~';
-var criteria = '';
 
 var hasLowerCase = document.getElementById('pwLowerCase');
 var hasUpperCase = document.getElementById('pwUpperCase');
@@ -22,13 +21,15 @@ var passwordContainer = document.getElementById('password');
 //If criteria checkbox is selected... add the associated character string to the 'criteria' variable
 //Return the final 'criteria' string
 function buildString(){
+	var criteria = '';
+
     if (!hasLowerCase.checked && !hasUpperCase.checked && !hasNumeric.checked && !hasSpecialChar.checked){
         criteria = '';
     }
 
 	if (hasLowerCase.checked){
     	criteria += lettersLower;
-	} 
+	}
 
 	if (hasUpperCase.checked){
     	criteria += lettersUpper;
@@ -77,7 +78,9 @@ generateBtn.addEventListener('click', function(){
 		critErrorMsg.setAttribute('aria-hidden', true)
 		lengthError.setAttribute('aria-hidden', true);
 		lengErrorMsg.setAttribute('aria-hidden', true);
-	} 
+	} else {
+		passwordContainer.innerText = " ";
+	}
 	
 	if (!buildString()){
 		criteriaError.setAttribute('aria-hidden', false);
