@@ -233,6 +233,14 @@ main {
   height: 100%;
 }
 
+.port-image-title {
+  text-align: center;
+  margin-top: 12px;
+  background-color: #ff9a00;
+  color: #fff;
+  padding: 6px;
+}
+
 .coming-soon {
   background-color: #eee;
   height: 350px;
